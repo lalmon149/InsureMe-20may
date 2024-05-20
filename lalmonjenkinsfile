@@ -17,4 +17,10 @@ pipeline {
         echo 'Generate a jar file the package using Maven'
         sh 'mvn clean package'
             }
-    }
+       }
+   }
+}
+
+
+
+
