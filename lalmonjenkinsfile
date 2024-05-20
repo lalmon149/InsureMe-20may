@@ -33,14 +33,14 @@ pipeline {
       steps {
         echo 'Docker Login'
         withCredentials([usernamePassword(credentialsId: 'Dockerlogin-user', passwordVariable: 'Dockerpassword', usernameVariable: 'Dockerlogin')]) {
-        sh 'docker login -u ${env.dockerlogin} -p ${env.dockerpassword}'
+        sh 'docker login -u ${dockerlogin} -p ${dockerpassword}'
                          }
                     }
            }
      stage('Push Docker Image') {
       steps {
         echo 'Push a Docker Image'
-        sh 'sh 'docker push ajit0211/image01:1.0''
+        sh 'docker push ajit0211/image01:1.0'
                    }
             }
        }
