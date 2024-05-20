@@ -26,7 +26,7 @@ pipeline {
    stage('create image using package') {
       steps {
        echo 'creating a docker image from the package'
-       sh 'docker build  -t ajit0211/InsureMe:01 .'
+       sh 'docker build  -t ajit0211/InsureMe:1.0 .'
             }
         }
    }
